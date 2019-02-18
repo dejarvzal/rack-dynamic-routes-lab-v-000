@@ -9,11 +9,13 @@ class Application
       @@items.collect do |item|
         resp.write "#{item.price}\n"
         end
-    elsif resp.write "Item not found"
+    elsif resp.write "Route not found"
+      resp.status = 404
+    # elsif resp.write "Item not found"
 
     else
-        resp.write "Route not found"
-      resp.status = 404
+        resp.write "Item not found"
+      # resp.status = 404
     end
 
     resp.finish

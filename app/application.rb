@@ -6,7 +6,7 @@ class Application
 
     # @@items = [Item.new]
     if req.path=="/items"
-      @@items.collect do |item|
+      @@items.each do |item|
         resp.write "#{item.price}\n"
         end
     elsif resp.write "Route not found"

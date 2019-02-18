@@ -14,7 +14,7 @@ class Application
       resp.status = 404
     # elsif resp.write "Item not found"
 
-  else @@items.include?(item)
+  else !@@items.include?(item)
         resp.write "Item not found"
         resp.status = 404
       #   resp.write "Route not found"

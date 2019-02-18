@@ -6,7 +6,7 @@ class Application
 
     # @@items = [Item.new]
     if req.path=="/items"
-      @@items.collect do |item|
+      # @@items.collect do |item|
         resp.write "#{item.price}\n"
         end
     else

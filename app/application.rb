@@ -6,7 +6,7 @@ class Application
 
     @@items.each do |item|
       resp.write "#{item.price}\n"
-    end
+      end
     if req.path=="/items"
       resp.write "You requested the songs"
     else

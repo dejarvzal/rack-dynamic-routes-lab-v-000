@@ -9,7 +9,6 @@ class Application
       @@items.each do |item|
         resp.write "#{Item.price}\n"
         end
-      # resp.write "You requested the songs"
     else
       resp.write "Route not found"
       resp.status = 404

@@ -8,8 +8,9 @@ class Application
     if req.path=="/items"
       @@items.collect do |item|
         resp.write "#{item.price}\n"
-        end
+        # end
     else resp.write "Item not found"
+      
       elsif
         resp.write "Route not found"
       resp.status = 404

@@ -6,11 +6,12 @@ class Application
 
     # @@items = [Item.new]
     if req.path=="/items"
-      # @@items.collect do |item|
+      @@items.collect do |item|
         resp.write "#{item.price}\n"
-        # end
-    else
-      resp.write "Route not found"
+        end
+    else resp.write "Item not found"
+      elsif 
+        resp.write "Route not found"
       resp.status = 404
     end
 
